@@ -11,6 +11,30 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+    'uses' => 'PostController@getPostsIndex',
+    'as' => 'blog.index',
+]);
+Route::get('/posts', [
+    'uses' => 'PostController@getPostsIndex',
+    'as' => 'blog.index',
+]);
+
+//Route::post('/posts', [
+//    'uses' => 'BlogController@postPostsIndex',
+//    'as' => 'blog.index',
+//]);
+
+Route::get('/post/{post_id}', [
+    'uses' => 'PostController@getSinglePostIndex',
+    'as' => 'blog.single',
+]);
+
+Route::get('/about', function(){
+    return view('frontend.blog.about');
+})->name('about');
+
+Route::get('/contact',  [
+    'uses' => 'ContactMessageController@getcontactIndex',
+    'as' => 'contact',
+]);
