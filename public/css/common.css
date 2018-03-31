@@ -1,0 +1,13 @@
+.main{
+    width: 50%;
+    margin: 0 auto;
+}
+
+nav{
+    margin-bottom: 2em;
+}
+nav > ul{
+    height: 4em;
+    background-color: rgb(235, 167, 229);
+    color:white;
+}
