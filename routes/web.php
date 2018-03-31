@@ -44,4 +44,13 @@ Route::group([
         Route::get('/',  [
             'uses' => 'AdminController@getIndex',
             'as' => 'admin.index', ]);
+            
+        Route::get('/posts/create', [
+            'uses' => 'PostController@getCreatePost',
+            'as' => ('admin.blog.create_post')
+        ]);
+        Route::post('/post/create', [
+            'uses' => 'PostController@store',
+            'as' => ('admin.post.create')
+        ]);
     }); 

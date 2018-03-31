@@ -12,11 +12,14 @@
             <div class="box-top">
                 <span class="flaticon-newspaper1">Post </span>
                 <!--<span class="right">Welcome <strong><?php //echo $_SESSION['username']."</strong>,"." "."Last update: " . date("Y-m-d"); ?></span> -->
-                <a href="#" class="btn btn-primary admin-btn" role="button" aria-pressed="true">New Post</a>
+                <a href="{{ route('admin.blog.create_post') }}" class="btn btn-primary admin-btn" role="button" aria-pressed="true">New Post</a>
                 <a href="#" class="btn btn-primary admin-btn" role="button" aria-pressed="true">Show all Post</a>
             </div>
                 
-            
+            <!-- if error -->
+            <div class="box-panel">
+                @include('errors.error-message') 
+            </div>
             <!-- if not post -->
                  
             <div class="box-panel">
