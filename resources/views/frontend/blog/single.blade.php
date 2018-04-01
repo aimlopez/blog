@@ -6,9 +6,9 @@
 
 @section('content')
     <article>
-        <h3>Post Tile</h3>
-        <span>Post by | Date</span>
-        <p>Body</p>
+        <h3>{{$post->title}}</h3>
+        <span>Post by {{$post->author}}, on {{$post->created_at}} </span>
+    <p>{{$post->body}}</p>
         <a href="#">Read More</a>
     </article>
 

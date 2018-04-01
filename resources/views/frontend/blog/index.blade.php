@@ -5,14 +5,18 @@
 @endsection
 
 @section('content')
-    <article class="card">
-        <h3>Post Tile</h3>
-        <span><small>Post by | Date</small></span>
-        <p>Body</p>
-        <a href="#">Read More</a>
-    </article>
-    <section class='pagination'>
-        pagination
-    </section>
-   
+    @foreach ($posts as $post)
+        <article class="card">
+            <h3>{{ $post->title }}</h3>
+            <span><small>Created by {{ $post->author }}, {{ $post->created_at }}</small></span>
+            <p>{{ $post->body }}</p>
+            <a href="{{route('blog.single', ['post_id' => $post->id, 'end' => 'frontend'])}}">Read More</a>
+        </article>
+    @endforeach
+    
+    
+        <section class='pagination'>
+            {{ $posts->links() }}
+        </section>
+
 @endsection
