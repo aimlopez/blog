@@ -1,7 +1,17 @@
 form.create-post{
     margin-bottom: 2em;
 }
-
+.create-post button.submit{
+    width: 100%;
+}
 select.category-select{
     margin-bottom: 2em;
+}
+
+.info-box li{
+    border: 2px solid #dc3545;
+    list-style: none;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    border-radius: .25rem;
 }

@@ -38,13 +38,26 @@ Route::get('/contact',  [
     'uses' => 'ContactMessageController@getcontactIndex',
     'as' => 'contact',
 ]);
-
+/**
+ * Admin controllers
+ */
 Route::group([
     'prefix' => '/admin'], function (){
         Route::get('/',  [
             'uses' => 'AdminController@getIndex',
-            'as' => 'admin.index', ]);
-            
+            'as' => 'admin.index', 
+        ]);
+        
+        Route::get('/posts', [
+            'uses' => 'PostController@getAdminPostsIndex',
+            'as' => 'admin.posts.index', 
+        ]);
+        
+        Route::get('/post/{post_id}&{end}', [
+            'uses' => 'PostController@getSinglePostIndex',
+            'as' => 'admin.single', 
+        ]);
+
         Route::get('/posts/create', [
             'uses' => 'PostController@getCreatePost',
             'as' => ('admin.blog.create_post')
@@ -52,5 +65,25 @@ Route::group([
         Route::post('/post/create', [
             'uses' => 'PostController@store',
             'as' => ('admin.post.create')
+        ]);
+
+        Route::get('/post/{post_id}/edit', [
+            'uses' => 'PostController@getUpdatePost',
+            'as' => ('admin.post.edit')
+        ]);
+
+        Route::post('/post/update', [
+            'uses' => 'PostController@postUpdatePost',
+            'as' => ('admin.post.update')
+        ]);
+
+        Route::get('/post/{post_id}/delete', [
+            'uses' => 'PostController@destroy',
+            'as' => ('admin.delete')
+        ]);
+
+        Route::get('/categories', [
+            'uses' => 'CategoryController@getPostsCategories',
+            'as' => 'admin.categories.index', 
         ]);
     }); 

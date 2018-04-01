@@ -1,13 +1,24 @@
+html, body {
+    margin: 0;
+    padding: 0
+}
 .main{
     width: 50%;
     margin: 0 auto;
 }
-
-nav{
+header{
     margin-bottom: 2em;
+}
+nav{
+    width: 100%;
 }
 nav > ul{
     height: 4em;
     background-color: rgb(235, 167, 229);
     color:white;
+}
+
+.main .card{
+    margin-bottom: 1em;
+    padding: 1em;
 }
