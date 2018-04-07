@@ -1,0 +1,47 @@
+.create-category {
+    margin: 3em auto;
+}
+/*.show-category .category-card {
+    width: 50rem;
+    margin-bottom: 1.5em;
+}*/
+
+
+#categories{
+    border-collapse: collapse;
+    width: 85%;
+    border: 1px solid #ddd;
+}
+
+th {
+    padding: 0.5em;
+    text-align: left;
+    background-color: rgb(41, 128, 185);;
+    color: white;
+}
+
+#categories td{
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+}
+#categories td:nth-child(1){
+    width: 55%;
+}
+#categories td:nth-child(2)
+{
+    width: 45%;
+}
+#cat-links{
+    float: right;
+}
+#cat-links a { 
+    margin-right: 0.5em;
+}
+.category-card input{
+    display:none;
+}
+
+#save-category
+{
+    display:none;
+}

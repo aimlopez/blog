@@ -6,11 +6,10 @@
     
     <div class="sidebar">
         <ul class="nav">
-            <li><a href="{{ route('admin.index') }}"><span class="flaticon-cogwheels12">Dashboard</span></a></li>
-            <li><a href="{{ route('admin.posts.index') }}"><span class="flaticon-newspaper1">Posts</span></a></li>
-            <li><a href=""><span class="flaticon-selling1">Categories</span></a></li>
-            <li><a href=""><span class="flaticon-multiple25">Users Message</span></a></li>
+            <li {{ Request::is('admin') ? 'class=active' : ''}}><a href="{{ route('admin.index') }}"><span class="flaticon-cogwheels12">Dashboard</span></a></li>
+            <li {{ Request::is('admin/post*') ? 'class=active' : ''}}><a href="{{ route('admin.posts.index') }}"><span class="flaticon-newspaper1">Posts</span></a></li>
+            <li {{ Request::is('admin/categories') || Request::is('admin/category*')? 'class=active' : ''}}><a href="{{ route('admin.categories.index')}}"><span class="flaticon-selling1">Categories</span></a></li>
+            <li {{ Request::is('admin/contact') ? 'class=active' : ''}}><a href=""><span class="flaticon-multiple25">Users Message</span></a></li>
             <li><a href="../logout.php"><span class="flaticon-logout13">Logout</span></a></li>
         </ul>
     </div>
-        

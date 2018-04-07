@@ -83,7 +83,23 @@ Route::group([
         ]);
 
         Route::get('/categories', [
-            'uses' => 'CategoryController@getPostsCategories',
+            'uses' => 'CategoryController@getCategoriesIndex',
             'as' => 'admin.categories.index', 
         ]);
+        
+        Route::post('/category/create', [
+            'uses' => 'CategoryController@store',
+            'as' => 'admin.category.create', 
+        ]);
+
+        Route::get('/category/{category_id}/delete', [
+            'uses' => 'CategoryController@destroy',
+            'as' => 'admin.category.delete', 
+        ]);
+
+        Route::post('/category/update', [
+            'uses' => 'CategoryController@update',
+            'as' => 'admin.category.update', 
+        ]);
+        
     }); 
