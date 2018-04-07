@@ -72,7 +72,19 @@ div#header {
 .logo a span {
     font-weight: 300;
 }
+.glowing-border {
+    border: 2px solid #dadada;
+    border-radius: 7px;
+    width: 58.5px;
+    transition: 0.1s;
+}
 
+.glowing-border:focus { 
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+    width: 125px;
+}
 div#container {
     width: 100%;
     height: auto;
@@ -204,180 +216,14 @@ a.mobile:active {
     background-color: 4a4a4a;
 }
 
-.glowing-border {
-    border: 2px solid #dadada;
-    border-radius: 7px;
-    width: 58.5px;
-    transition: 0.1s;
-}
-
-.glowing-border:focus { 
-    outline: none;
-    border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;
-    width: 125px;
-}
-
-.statbox {
-    display: inline-block;
-    position: relative;
-    margin-right: 15px;
-    width: 245px;
-    height: 140px;
-    background-color: aqua;
-    box-shadow: 1px 1px 1px 1px #bbb;
-}
-
-.statbox:last-child {
-    margin-right: 0;
-}
-
-.statbox .statbox-bottom {
-    color: white;
-    font-size: 1em;
-    font-weight: 300;
-    width: 100%;
-    height: 30px;
-    padding-top: 5px;
-    padding-left: 5px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    vertical-align: baseline;
-    background-color: lightskyblue;
-}
-
-.statbox .statbox-content {
-    width: 100%;
-    height: 100%;
-    color: white;
-}
-.statbox .statbox-content img {
-    padding-top: 15px;
-    padding-left: 15px;
-}
-.statbox .statbox-content .visitors {
-    width: 100%;
-    height: 100%;
-    background-color: #e74c3c;
-}
-
-.statbox .statbox-content .visitors:hover {
-    width: 100%;
-    height: 100%;
-    background-color: #c0392b;
-}
-#calc-stats {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    height: 80px;
-    width: 130px;
-    text-align: right;
-}
-
-.statbox .statbox-content .orders {
-    width: 100%;
-    height: 100%;
-    background-color: #f39c12;
-    
-}
-.statbox .statbox-content .orders:hover {
-    width: 100%;
-    height: 100%;
-    background-color: #d35400;
-    
-}
-
-.statbox .statbox-content .members {
-    width: 100%;
-    height: 100%;
-    background-color: #2ecc71;
-    
-}
-
-.statbox .statbox-content .members:hover {
-    width: 100%;
-    height: 100%;
-    background-color: #16a085;
-    
-}
-
-.statbox .statbox-content .profit {
-    width: 100%;
-    height: 100%;
-    background-color: #9b59b6;
-}
-
-.statbox .statbox-content .profit:hover {
-    width: 100%;
-    height: 100%;
-    background-color: #8e44ad;
-}
-
-.statbox-bottom .right {
-    font-size: 0.9em;
-    line-height: 2.0em;
-    vertical-align: baseline;
-    padding-right: 2px;
-    
-}
-
-.statbox-bottom .right img {
-    width: 13px;
-    height: 13px;
-    padding-top: 2px;
-    padding-left: 2px;  
-    padding-right: 10px;
-      
-}
-
-.box-panel .press {
-    font-size: 1.2em;
-    line-height: 1.4em;
-    vertical-align: text-bottom;
-    width: 40px;
-    height: 30px;
-    color: #fff;
-    background-color: #f02d2d;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 1px 1px #6d2727;
-    
-}
-
-.box-panel .press:hover,
-.box-panel .press.hover {
-    text-decoration: none;
-    background-color: #b40707;
-}
-
-.box-panel .press:active,
-.box-panel .press.active {
-  background-color: #b84141;
-  box-shadow: 0 2px #6d2727;
-  transform: translateY(5px);
-}
 p.error{
     color: #f39c12;
     font-size: 18px;
 }
-/*label.adminFormlabel{
-    font-size: 1.2em;
-    font-weight: 800;
-}*/
 
-input.adminFormInput{
-    width: 100%;
-    height: 30px;
+.active{ 
+    background-color: rgb(77, 89, 110)
 }
-
-input[type='submit']{
-    margin-top: 5px;
-    width: 120px;
-    height: 40px;
-}
-
 @media only screen and (max-width: 320px) {
     
     a.mobile {
